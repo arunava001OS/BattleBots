@@ -1,12 +1,72 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Battlebots</title>
+    <link rel="stylesheet" href="{%static 'css/index.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+    <canvas></canvas>
+    <script type="text/javascript">
+        const Star = function (x, y, z) {
+            this.x = x; this.y = y; this.z = z;
+            this.size = 10;
+        };
+        var context = document.querySelector("canvas").getContext("2d");
+        var height = document.documentElement.clientHeight;
+        var width = document.documentElement.clientWidth;
+        var stars = new Array();
+        var max_depth = 5000;
+        for (let index = 0; index < 200; index++) stars[index] = new Star(Math.random() * width, Math.random() * height, index * (max_depth / 200));
+        function loop() {
+            window.requestAnimationFrame(loop);
+            height = document.documentElement.clientHeight;
+            width = document.documentElement.clientWidth;
+            context.canvas.height = height;
+            context.canvas.width = width;
+            context.fillStyle = "#000000";
+            context.fillRect(0, 0, width, height);
+            for (let index = stars.length - 1; index > -1; index--) {
+                let star = stars[index];
+                star.z -= 50;
+                if (star.z < 0) {
+                    stars.push(stars.splice(index, 1)[0]);
+                    star.z = max_depth;
+                    continue;
+                }
+                let translate_x = width * 0.5;
+                let translate_y = height * 0.5;
+                let field_of_view = (height + width) * 0.5;
+                let star_x = (star.x - translate_x) / (star.z / field_of_view) + translate_x;
+                let star_y = (star.y - translate_y) / (star.z / field_of_view) + translate_y;
+                let scale = field_of_view / (field_of_view + star.z);
+                let color = Math.floor(scale * 5000);
+                context.fillStyle = "rgb(" + color + "," + color + "," + color + ")";
+                context.fillRect(star_x, star_y, star.size * scale, star.size * scale);
+            }
+        }
+        loop();
+    </script>
+
+    <div class="container" id = "index">
+        <div class="row">
+            <div class="col-12">
+                <button id="play-button">PLAY NOW</button>
+            </div>
+        </div>
+
+    </div>
+
 </body>
+
 </html>
