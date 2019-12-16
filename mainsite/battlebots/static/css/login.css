@@ -18,20 +18,21 @@ canvas {
 
 #index{
     background-color:rgba(red, green, blue, 0);
-    height: 90%;
+    height: 100%;
     width: 100%;
 }
+
 @media only screen and (min-width: 1224px) {
     #play-button{
         margin-left: 50%;
         transform: translate(-50%);
         padding: 2vw 4vw;
         background-color: black;
-        color: rgba(255, 255, 255, 0.719);
         border: 4px solid rgba(255, 255, 255, 0.719);
+        color:  rgba(255, 255, 255, 0.719);
         line-height: 2vw;
         font-family: 'Roboto', sans-serif;
-        font-size: 2.7vw;
+        font-size: 1.5vw;
     }
     #play-button:hover{
         margin-left: 50%;
@@ -42,7 +43,7 @@ canvas {
         color: white;
         line-height: 2vw;
         font-family: 'Roboto', sans-serif;
-        font-size: 3vw;
+        font-size: 1.7vw;
     }
     a:link, a:visited{
         color: rgba(255, 255, 255, 0.719);
@@ -50,7 +51,6 @@ canvas {
     a:hover{
         color: white;
     }
-
     #writeup{
         background-color: rgba(131, 126, 126, 0.781);
         text-align: center;
@@ -60,19 +60,18 @@ canvas {
 
 @media only screen and (max-width: 480px){
     #play-button{
-        margin-left: 50%;
-        transform: translate(-50%);
+        margin-left:12vw ;
         padding: 4vw 6vw;
         background-color:black;
-        border: 4px solid white;
         color: white;
+        border: 4px solid white;
         line-height: 2vw;
         font-family: 'Roboto', sans-serif;
         font-size: 6vw;
     }
 
     a:link, a:visited{
-        color:  rgba(255, 255, 255, 0.719);
+        color: rgba(255, 255, 255, 0.719);
     }
     a:hover{
         color: white;
