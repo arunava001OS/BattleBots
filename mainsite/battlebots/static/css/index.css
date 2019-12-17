@@ -1,0 +1,85 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+      
+html, body { 
+    width:100%; 
+    height:100%; 
+ }
+
+canvas {
+    z-index: -1;
+    height:100%;
+    position:absolute;
+    width:100%;
+}
+
+#index{
+    background-color:rgba(red, green, blue, 0);
+    height: 90%;
+    width: 100%;
+}
+@media only screen and (min-width: 1224px) {
+    #play-button{
+        margin-left: 50%;
+        transform: translate(-50%);
+        padding: 2vw 4vw;
+        background-color: black;
+        color: rgba(255, 255, 255, 0.719);
+        border: 4px solid rgba(255, 255, 255, 0.719);
+        line-height: 2vw;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.7vw;
+    }
+    #play-button:hover{
+        margin-left: 50%;
+        transform: translate(-50%);
+        padding: 2vw 4vw;
+        background-color: black;
+        border: 7px solid white;
+        color: white;
+        line-height: 2vw;
+        font-family: 'Roboto', sans-serif;
+        font-size: 3vw;
+    }
+    a:link, a:visited{
+        color: rgba(255, 255, 255, 0.719);
+    }
+    a:hover{
+        color: white;
+    }
+
+    #writeup{
+        background-color: rgba(131, 126, 126, 0.781);
+        text-align: center;
+        padding: 15vw 10vw;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    #play-button{
+        margin-left: 50%;
+        transform: translate(-50%);
+        padding: 4vw 6vw;
+        background-color:black;
+        border: 4px solid white;
+        color: white;
+        line-height: 2vw;
+        font-family: 'Roboto', sans-serif;
+        font-size: 6vw;
+    }
+
+    a:link, a:visited{
+        color:  rgba(255, 255, 255, 0.719);
+    }
+    a:hover{
+        color: white;
+    }
+    #writeup{
+        background-color: rgba(131, 126, 126, 0.781);
+        text-align: center;
+        padding: 15vw 10vw;
+    }
+}
