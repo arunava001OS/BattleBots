@@ -12,3 +12,8 @@ def play(request):
 
 def index2(request):
     return render(request,'battlebots/index2.html',{})
+
+def leaderboard(request):
+    return render(request,'battlebots/leaderboard.html',{})
+
+
