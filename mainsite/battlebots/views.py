@@ -6,3 +6,9 @@ def index(request):
 
 def login(request):
     return render(request,'battlebots/login.html',{})
+
+def play(request):
+    return render(request,'battlebots/play.html',{})
+
+def index2(request):
+    return render(request,'battlebots/index2.html',{})
