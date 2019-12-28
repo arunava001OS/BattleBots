@@ -18,5 +18,7 @@ def index2(request):
 
 def leaderboard(request):
     return render(request,'battlebots/leaderboard.html',{})
+def interface(request):
+    return render(request,'battlebots/interface.html',{})
 
 

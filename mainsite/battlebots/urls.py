@@ -8,5 +8,5 @@ urlpatterns = [
     path('playgame',views.play,name = 'play'),
     path('index2',views.index2,name = 'index2'),
     path('leaderboard',views.leaderboard,name = 'leaderboard'),
-
+    path('interface',views.interface,name = 'interface_url'),
 ]
