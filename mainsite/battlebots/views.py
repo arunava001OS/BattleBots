@@ -4,9 +4,6 @@ from django.shortcuts import render
 def index(request):
     return render(request,'battlebots/index.html',{})
 
-def index1(request):
-    return render(request,'battlebots/index1.html',{})
-
 def login(request):
     return render(request,'battlebots/login.html',{})
 
@@ -18,7 +15,5 @@ def index2(request):
 
 def leaderboard(request):
     return render(request,'battlebots/leaderboard.html',{})
-def interface(request):
-    return render(request,'battlebots/interface.html',{})
 
 
