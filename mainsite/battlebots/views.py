@@ -20,5 +20,7 @@ def leaderboard(request):
     return render(request,'battlebots/leaderboard.html',{})
 def interface(request):
     return render(request,'battlebots/interface.html',{})
+def game(request):
+    return render(request,'battlebots/game.html',{})
 
 

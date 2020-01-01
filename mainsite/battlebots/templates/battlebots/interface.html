@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>TheQuest - Gaming Magazine Template</title>
+	<title>Battlebots</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="TheQuest Gaming Magazine Template">
 	<meta name="keywords" content="gaming, html">
@@ -44,9 +44,9 @@
 			<img src="{% static 'images/logo.png' %}" alt="logo">
 		</a>
 		<ul class="main-menu">
-			<li><a href="index.html">Home</a></li>
+            <li><a href="{% url 'interface_url' %}">Home</a></li>
 			<li><a href="">Rules and Regulation</a></li>
-			<li><a href="game.html">Games</a></li>
+			<li><a href="{% url 'game_url' %}">Games</a></li>
 			<li><a href="">About Us</a></li>
 			<li><a href="">News</a></li>
 			<li><a href="">Page</a></li>
@@ -60,7 +60,7 @@
 	<!-- Hero section -->
 	<section class="hero-section">
 		<div class="hero-slider owl-carousel">
-			<div class="hero-item set-bg" data-setbg="{% static 'images/1.jpg' %}">
+			<div class="hero-item set-bg" data-setbg="{% static 'images/4.jpg' %}">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-10 offset-lg-1">
@@ -109,6 +109,67 @@
 	</section>
 	<!-- Blog section end -->
 
+	<!-- Game section -->
+	<section class="game-section character-one">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="about-game">
+						<div class="game-title mb-0">
+							<img src="img/game-characters/title-icon.png" alt="">
+							<h2>About the Game</h2>
+						</div>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Fusce urna quam, euismod sit amet mollis quis, vestibulum quis velit. Vestibulum malesuada aliquet libero viverra cursus. Aliquam erat volutpat. Morbi id dictum quam, ut commodo lorem. In at nisi nec arcu porttitor aliquet vitae at dui. Sed sollicitudin nulla non leo viverra scelerisque.Fusce urna quam, euismod sit amet mollis quis, vestibulum quis velit.</p>
+						<div class="site-btn">Read More</div>
+					</div>
+				</div>
+				<div class="col-lg-5">
+					<div class="about-game-img">
+						<img src="img/game-characters/5.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Game section end -->
+
+
+	<section class="work-steps-section">
+		<div class="container">
+			<div class="game-title">
+				<img src="img/game-characters/title-icon.pn g" alt="">
+				<h2>Your Weapons</h2>
+			</div>
+			<div class="row work-steps">
+
+				<div class="col-md-4">
+					<div class="work-step-box">
+						<div class="ws-icon">
+							<img src="{% static 'images/interface/2.png' %}" alt="">
+						</div>
+						<h4>Select your weapons</h4>
+						<p>Morbi id dictum quam, ut commodo lorem. In at nisi nec arcu porttitor aliquet vitae at dui. Sed sollicitudin nulla non leo viverra. </p>
+						<div class="center" style="text-align: left">
+						<ul>
+							<li><input type="checkbox" name=""> Malesuada aliquet libero </li>
+							<li><input type="checkbox" name=""> Erat volutpat. Morbi id dictum</li>
+							<li><input type="checkbox" name=""> In at nisi nec arcu porttitor aliquet </li>
+						</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- Work steps section end -->
 	<!-- Blog list section -->
 	
 	<!-- Blog list section end -->
@@ -123,11 +184,8 @@
 			<div class="container">
 				<div class="social-links">
 					<a href="#"><i class="fa fa-instagram"></i><span>instagram</span></a>
-					<a href="#"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
 					<a href="#"><i class="fa fa-facebook"></i><span>facebook</span></a>
 					<a href="#"><i class="fa fa-twitter"></i><span>twitter</span></a>
-					<a href="#"><i class="fa fa-youtube"></i><span>youtube</span></a>
-					<a href="#"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
 				</div>
 			</div>
 		</div>

@@ -39,12 +39,8 @@ h1 span{
         opacity: 1;
         transform: rotateY(0deg);
         filter: blur(0);
-
     }
-    
 }
-
-
 canvas {
     z-index: -1;
     height:14   0%;
